@@ -1,16 +1,62 @@
-# This is a sample Python script.
+# Finding most frequent list index
+# Start
+from typing import Any, Callable
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+numbers = [1, 3, 7, 4, 3, 0, 3, 6, 3]
+copy_of_numbers = numbers  # holding numbers in copy
+numbers.sort()
+sorted_value = []
+
+# taking frequency number and value in list
+# and deleting calculated values in array
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])]
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])]
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])]
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])]
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])]
+sorted_value.append([numbers.count(numbers[0]), numbers[0]])
+del numbers[:numbers.count(numbers[0])], numbers
+max_freq = max(sorted_value)
+print(f"the most frequent number is {max_freq[1]} and it was {max_freq[0]} times repeated")
+print("------------------------------------")
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def frequent_calc(lst: list):
+    lst.sort()
+    sorted_value = []
+    for item in range(0, len(lst)):
+        sorted_value.append([lst.count(lst[0]), lst[0]])
+        del lst[:lst.count(lst[0])]
+        if len(lst) == item + 1:
+            max_freq = max(sorted_value)
+            return f"the most frequent number is {max_freq[1]} and it was {max_freq[0]} times repeated"
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+print(frequent_calc([1, 3, 7, 4, 3, 0, 3, 6, 3]))
+print("------------------------------------")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+numbers = [1, 3, 7, 4, 3, 0, 3, 6, 3]
+print(f"the most frequent number is {max(numbers, key=numbers.count)} and "
+      f"it was {numbers.count(max(numbers, key=numbers.count))} times repeated")
+# End
+
+# Comfortable Word
+# Start
+word = set(input('Enter a word(it can contain Turkish words too) :'))
+left_hand_words, right_hand_words = set('qazwsxedcrfvtgb'), set('yhnujmıköolçpşğiü')
+print((word - left_hand_words != set()) and (word - right_hand_words != set()))
+# End
+
+# Password Reminder
+# Start
+name = input('Please enter your name :')
+if name == 'ahmet':
+    print(f"Hello, {name}! The password is : W@12")
+else:
+    print(f"Hello, {name}! See you later.")
+# End
