@@ -67,9 +67,9 @@ dict_by_dict = {'animal': 'dog',
 # iterable şeklindedir, döngü içine girebilir
 print("Items : ", dict_by_dict.items())
 print(dict_by_dict.keys())
+# dict. leri list şekline çevirir
 print(dict_by_dict.values())
 
-# dict. leri list şekline çevirir
 print(list(dict_by_dict.items()))
 print(list(dict_by_dict.values()))
 
@@ -117,3 +117,9 @@ print("Marry'nin yaşı :", school_records['personal_info']['teen']['marry']['ag
 # Liste biçiminde joseph'in ders ve notları
 print("joseph (Liste):", list(school_records['grades_info']['teen']['joseph'].items()))
 print("joseph (Dict):", school_records['grades_info']['teen']['joseph'])
+
+print("joseph :", school_records['grades_info']['teen']['joseph'])
+
+# İki dictionary birleştirmenin kısayolu
+combined_dict = dict(**dict_by_dict, **school_records)
+print(combined_dict)
