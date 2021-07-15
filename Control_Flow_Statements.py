@@ -47,3 +47,13 @@ if num % 2 == 0:
     print(f"{num} is even")
 else:
     print(f"{num} is odd")
+
+num1 = float(input("Number 1 : "))
+num2 = float(input("Number 2 : "))
+
+if num1 > num2:
+    print(f"The large number is {num1}")
+elif num1 == num2:
+    print(f"Both number is equal : {num2}")
+else:
+    print(f"The large number is {num2}")

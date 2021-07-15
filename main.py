@@ -49,6 +49,8 @@ print(f"the most frequent number is {max(numbers, key=numbers.count)} and "
 # Start
 word = set(input('Enter a word(it can contain Turkish words too) :'))
 left_hand_words, right_hand_words = set('qazwsxedcrfvtgb'), set('yhnujmıköolçpşğiü')
+# print("sağ el kelimesi: ", word - left_hand_words)
+# print("sol el kelimesi: ", word - right_hand_words)
 print((word - left_hand_words != set()) and (word - right_hand_words != set()))
 # End
 
@@ -68,8 +70,8 @@ chronic = input("Do you have a severe chronic disease?").strip().lower() == "yes
 immune = input("Is your immune system too weak?").strip().lower() == "yes"
 # print(f"age: {age} , chronic: {chronic}, immune: {immune}")
 if age or chronic or immune:
-  print("You are in risky group")
+    print("You are in risky group")
 else:
-  print("You are not in risky group")
+    print("You are not in risky group")
 
 # End
