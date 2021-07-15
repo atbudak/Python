@@ -30,4 +30,20 @@ for x, y in zip(text, numbers):
 # zip() function make an iterator that aggregates
 # elements from each of the iterables.
 
+# Lesson Notes
 
+# String değerlerde ilk karakterin ASCII karşılıklarını karşılaştırır
+value1 = '2020'
+if value1 >= '1200':
+    print('string values checks by first value')
+
+# boolean değer aldık kullanıcıdan
+convert = input("yes or no ? ").title().strip() == 'Yes'
+print(convert, type(convert))
+
+
+num = int(input("Enter a number: ").strip())
+if num % 2 == 0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")

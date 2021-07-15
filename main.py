@@ -60,3 +60,16 @@ if name == 'ahmet':
 else:
     print(f"Hello, {name}! See you later.")
 # End
+
+# Covid-19 Risk
+# Start
+age = input("Are you a cigarette addict older than 75 years old?").strip().lower() == "yes"
+chronic = input("Do you have a severe chronic disease?").strip().lower() == "yes"
+immune = input("Is your immune system too weak?").strip().lower() == "yes"
+# print(f"age: {age} , chronic: {chronic}, immune: {immune}")
+if age or chronic or immune:
+  print("You are in risky group")
+else:
+  print("You are not in risky group")
+
+# End
