@@ -18,3 +18,8 @@ print("aradaki değerleri alma : ", l)
 empty = []
 print(max(empty, default="boş"))
 # list boş olması durumunda default içeriğini verir
+
+# Enumarate
+para = 1000
+gunluk_kazanc = enumerate([para * 1.07 ** i for i in range(1, 8)], 1)
+print(list(gunluk_kazanc))

@@ -69,12 +69,22 @@ age = input("Are you a cigarette addict older than 75 years old?").strip().lower
 chronic = input("Do you have a severe chronic disease?").strip().lower() == "yes"
 immune = input("Is your immune system too weak?").strip().lower() == "yes"
 # print(f"age: {age} , chronic: {chronic}, immune: {immune}")
-if age or chronic or immune:
-    print("You are in risky group")
-else:
-    print("You are not in risky group")
-
+print(["You are in risky group" if (age or chronic or immune) else "You are not in risky group"])
 # End
 
-# Changes
+# Is it an Armstrong Number?
+# Start
+number = input("Enter a number : ")
+# print(number, type(number), number.isdigit())
+if not number.isdigit():
+    print("It is an invalid entry. Don't use non-numeric, float, or negative values!")
+else:
+    num = list(map(int, number))
+    lst = [i**len(num) for i in num]
+    if sum(lst) == int(number):
+        is_Armstrong = f"{number} is an Armstrong number"
+    else:
+        is_Armstrong = f"{number} is not an Armstrong number"
+    print(is_Armstrong)
+# End
 
