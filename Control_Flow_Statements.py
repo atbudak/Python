@@ -57,3 +57,58 @@ elif num1 == num2:
     print(f"Both number is equal : {num2}")
 else:
     print(f"The large number is {num2}")
+
+age = input('Please Enter your age :')
+while not age.isdigit():
+    age = input('Wrong Entrance')
+if age.isdigit():
+    print(age + " is your age")
+
+guess = input('Enter a Number? ').strip()
+
+# while not (int(guess) == 33 and guess.isdigit()) de yazılabilir
+while True:
+    if int(guess) > 33:
+        print("Little lower")
+    elif int(guess) < 33:
+        print("Little high")
+    else:
+        print("Congrats!!")
+        break
+    guess = input('Number? ').strip()
+
+# adding - after words
+word = "clarusway"
+count = 0
+for i in word:
+    count += 1
+    if count < len(word):
+        i += '-'
+    print(i, end='')
+
+# dictionery leri itarate ettiğimizde key leri iterate eder
+user = {
+    'name': "Dan",
+    'surname': 'Wards',
+    'age': 42
+}
+for i in user:
+    print(i)
+
+for key1, value2 in user.items():
+    print(key1, ':', value2)
+
+for i in range(1, 10):
+    print(str(i)*i)
+
+# even-odd
+# how to add element inside for loop
+even = []
+odd = []
+for i in range(1, 10):
+    if i % 2 == 0:
+        even.append(i)
+    else:
+        odd.append(i)
+print('even :', even)
+print('odd  :', odd)

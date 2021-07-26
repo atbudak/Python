@@ -23,3 +23,5 @@ print(max(empty, default="boş"))
 para = 1000
 gunluk_kazanc = enumerate([para * 1.07 ** i for i in range(1, 8)], 1)
 print(list(gunluk_kazanc))
+
+print(*'seperate')

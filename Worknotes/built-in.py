@@ -8,7 +8,7 @@ print("-------------------------- map() --------------------------")
 # converting int to str
 print(list(map(str, li)))
 # as a function
-print(list(map(lambda x: x ** x, li)))
+print(list(map(lambda x: x ** 2, li)))
 print("-------------------------- filter() -----------------------")
 # filtering out elements based on pre defined func
 # we can use this func with map
@@ -34,6 +34,12 @@ def func1(x):
 
 print(func1(1))
 print("-------------------------- zip() --------------------------")
+# make an iterator that aggregtes elements from
+# each of the iterable
+# uzunluğu kısa olan listenin uzunluğuna kadar birleştirir
+text = ['bir', 'iki', 'üç', 'dört', 'beş', 'altı']
+numbers = [1, 2, 3, 4, 5, 6, 7]
+print(list(zip(text, numbers)))
 print("-------------------------- super() ------------------------")
 print("-------------------------- hash() -------------------------")
 print("-------------------------- format() -----------------------")
