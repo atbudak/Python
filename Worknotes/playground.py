@@ -1,5 +1,3 @@
-# cümle içerisinde geçen sesli harflerin her birinden kaçar
-# tane olduğunu çıktı veren bir program yazınız.
-# sentence = input("Enter a sentence : ").strip().lower()
-
+# This page for testing your code, run/test code here.
+# After work, keep this page clean.
 

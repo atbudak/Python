@@ -112,3 +112,14 @@ for i in range(1, 10):
         odd.append(i)
 print('even :', even)
 print('odd  :', odd)
+
+example_list = [11, 2, 24, 61, 48, 33, 3]
+odd = 0
+even = 0
+for i in example_list:
+    if i % 2:
+        even += 1
+    else:
+        odd += 1
+
+print('odd: ', odd, 'even: ', even)

@@ -12,6 +12,8 @@ print(list(map(lambda x: x ** 2, li)))
 print("-------------------------- filter() -----------------------")
 # filtering out elements based on pre defined func
 # we can use this func with map
+# Filter(None,list-name) if func. place is None it takes
+# only True arguments in collections
 
 
 def isOdd(x):
@@ -66,4 +68,16 @@ print("-------------------------- bytes() ------------------------")
 print("-------------------------- bytearray() --------------------")
 print("-------------------------- bin() --------------------------")
 print("-------------------------- any() --------------------------")
+# eğer collection type larda 1 tane bile True var ise any()
+# True değer döndürür. True var mı yok mu kontrol için
+names1 = ["ahmet", 0, False]
+mood1 = [None, {}, 0]
+empty1 = {}
+print(any(names1), any(mood1), any(empty1))
 print("-------------------------- all() --------------------------")
+# collection içi boş yada false item yoksa true döndürür
+# False bir değer varsa false döndürür
+names = ["ahmet", "mehmet", "recep"]
+mood = ["happy", "sad", 0]
+empty = {}
+print(all(names), all(mood), all(empty))
