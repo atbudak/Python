@@ -42,6 +42,15 @@ print("-------------------------- zip() --------------------------")
 text = ['bir', 'iki', 'üç', 'dört', 'beş', 'altı']
 numbers = [1, 2, 3, 4, 5, 6, 7]
 print(list(zip(text, numbers)))
+print("-------------------------- extend() -----------------------")
+# append collections with each other
+# with append we add inside list as a one element
+# with extend we add inside of list as long as extended list
+L1 = []
+L1.append([1, [2, 3], 4])
+L1.extend([7, 8, 9])
+print(L1)  # we can check extend and append here
+print(L1[0][1][1] + L1[2])
 print("-------------------------- super() ------------------------")
 print("-------------------------- hash() -------------------------")
 print("-------------------------- format() -----------------------")
