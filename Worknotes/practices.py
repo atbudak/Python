@@ -1,3 +1,4 @@
+import math
 # List Comprehensions
 # Start
 liste = [i for i in range(5)]
@@ -51,3 +52,69 @@ for i in sentence.strip():
         consonant += 1
 print(f"{vowel} vowels and {consonant} consonants are in the sentence")
 # End
+# Finding digit log for each number of 0 to n range
+# Start
+# uses math library
+# with the help of math lib.
+# we made faster then turning in to string in a long run
+num = int(input('Enter a Number : '))
+
+
+def calc(number):
+    lst = []
+    [lst.append(i) for i in range(1, number)]
+    ls2 = list(map(lambda x: int(math.log10(x)) + 1, lst))
+    return sum(ls2)
+
+
+print(calc(num))
+# End
+# Yıldız çizme
+# Start
+usercount = 12
+count = 0
+halfcount = int(usercount / 2)
+flag = True
+while flag:
+    if count <= usercount / 2:
+        print("*"*count)
+        count += 1
+    elif count >= usercount / 2:
+        count += 1
+        halfcount -= 1
+        print("*"*halfcount)
+        if count == usercount:
+            flag = False
+# End
+# math operation
+# Start
+
+
+def calculator(cn1, cn2, op):
+    if op != "+" and op != "-" and op != "%" and op != "*":
+        return "Enter valid arg."
+    else:
+        cn1, cn2 = str(cn1), str(cn2)
+        cal = eval(cn1 + op + cn2)
+        return cal
+
+
+print(calculator(5, 2, "*"))
+# End
+# Start
+# with __doc__ (docstring) we can add explanation
+# to our code as below
+
+
+def absolute_value(val):
+    """ This function turns absolute value of number"""
+    if val < 0:
+        return val * -1
+    else:
+        return val
+
+
+print(absolute_value(-4))
+print(absolute_value.__doc__)
+# End
+

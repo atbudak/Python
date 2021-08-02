@@ -25,3 +25,17 @@ gunluk_kazanc = enumerate([para * 1.07 ** i for i in range(1, 8)], 1)
 print(list(gunluk_kazanc))
 
 print(*'seperate')
+
+# 2. sırada bulunan liste elemanı 1. listedeki belirtilen
+# index'teki liste elemanların uzunluğunu verir
+print(len([[12, 34, 56], [2, 4, 5, 5], [3, 2]][1]))
+
+generate = (i**2 for i in range(12))
+print(*generate)
+# *generate ile içeriği sergiledik daha sonra generate'in
+# içi boşaldı, aşağıdaki boş verir. doldurulmuş değişkeni
+# 1 kere kullanabiliriz. for döngüsü ile kullanılan/yazdırılan
+# collection type değişkeni 2. kez kullanılamaz
+for i in generate:
+    print(i)
+
