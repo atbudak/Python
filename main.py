@@ -104,4 +104,36 @@ if flag:
 else:
     print(num, "is a prime number")
 # End
+# Fibonacci Numbers
+# Start
+fib_num = input("Enter a number : ").strip()
+while True:
+    if not fib_num.isdigit():
+        fib_num = input("Invalid Entrance, Try Again : ").strip()
+    else:
+        fib_num = int(fib_num)
+        break
+
+
+def fib(x):
+    """ This function keeps fibonacci numbers from zero to given."""
+    fib_list, num, flag = [], 2, True
+    while flag:
+        if fib_num == 0 or fib_num == 1:
+            "" if 0 == fib_num else fib_list.extend([fib_num])
+            flag = False
+        elif fib_num >= num:
+            fib_list.extend([0, 1]) if len(fib_list) < 2 else ""
+            fib_value = (fib_list[-1] + fib_list[-2])
+            fib_list.append(fib_value)
+            num = fib_value
+        else:
+            fib_list.remove(fib_list[0])
+            fib_list.remove(fib_list[-1]) if fib_list[-1] > fib_num else ""
+            break
+    return fib_list
+
+
+print(fib.__doc__, '\n', fib(fib_num))
+# End
 
