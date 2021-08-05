@@ -117,4 +117,34 @@ def absolute_value(val):
 print(absolute_value(-4))
 print(absolute_value.__doc__)
 # End
+# Start
+# Open brackets must be closed by the same type of brackets.
+# Open brackets must be closed in the correct order.
+# Note that an empty string is also considered valid.
+user = input("Enter brackets: ").strip()
+user = list(user)
 
+
+def compare(lst1):
+    """Comparing brackets with inputs"""
+    brackets = list("{[()]}")
+    check = []
+    for i in range(len(lst1)):
+        check.append(lst1[i] in brackets)
+    return all(check)
+
+
+result = 0
+if compare(user) and (len(user) % 2) == 0:
+    if user[0] == "(":
+        result = True if user[1] == ")" or user[-1] == ")" else False
+    elif user[0] == "{":
+        result = True if user[1] == "}" or user[-1] == "}" else False
+    elif user[0] == "[":
+        result = True if user[1] == "]" or user[-1] == "]" else False
+else:
+    result = "Invalid Entry"
+
+print(result)
+
+# End

@@ -1,12 +1,10 @@
+from typing import Any, Callable
 # Finding most frequent list index
 # Start
-from typing import Any, Callable
-
 numbers = [1, 3, 7, 4, 3, 0, 3, 6, 3]
 copy_of_numbers = numbers  # holding numbers in copy
 numbers.sort()
 sorted_value = []
-
 # taking frequency number and value in list
 # and deleting calculated values in array
 sorted_value.append([numbers.count(numbers[0]), numbers[0]])
@@ -23,7 +21,6 @@ sorted_value.append([numbers.count(numbers[0]), numbers[0]])
 del numbers[:numbers.count(numbers[0])], numbers
 max_freq = max(sorted_value)
 print(f"the most frequent number is {max_freq[1]} and it was {max_freq[0]} times repeated")
-print("------------------------------------")
 
 
 def frequent_calc(lst: list):
@@ -38,7 +35,6 @@ def frequent_calc(lst: list):
 
 
 print(frequent_calc([1, 3, 7, 4, 3, 0, 3, 6, 3]))
-print("------------------------------------")
 
 numbers = [1, 3, 7, 4, 3, 0, 3, 6, 3]
 print(f"the most frequent number is {max(numbers, key=numbers.count)} and "
@@ -104,6 +100,7 @@ if flag:
 else:
     print(num, "is a prime number")
 # End
+
 # Fibonacci Numbers
 # Start
 fib_num = input("Enter a number : ").strip()
@@ -135,5 +132,25 @@ def fib(x):
 
 
 print(fib.__doc__, '\n', fib(fib_num))
+# End
+
+# All Prime Numbers in Interval
+# Start
+
+
+def prime(*, num2=100, lst4=None):
+    """ This program finds Prime numbers from 2 to 100 """
+    if isinstance(lst4, type(None)):
+        lst4 = []
+    for i in range(2, num2+1):
+        for j in range(2, i):
+            if (i % j) == 0:
+                break
+        else:
+            lst4.append(i)
+    return lst4
+
+
+print(prime(), '\n', prime.__doc__)
 # End
 
