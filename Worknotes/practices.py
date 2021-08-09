@@ -121,6 +121,7 @@ print(absolute_value.__doc__)
 # Open brackets must be closed by the same type of brackets.
 # Open brackets must be closed in the correct order.
 # Note that an empty string is also considered valid.
+# defined other solution at work1 line 42
 user = input("Enter brackets: ").strip()
 user = list(user)
 
@@ -146,5 +147,23 @@ else:
     result = "Invalid Entry"
 
 print(result)
-
 # End
+# Start
+# We have a loud talking parrot. We are in trouble if the parrot is talking and the hour is before 6 or after 21.
+
+
+def parrot_trouble(talking, hour):
+    if talking:
+        if (hour in range(0, 7)) or (hour in range(21, 24)):
+            return True
+        else:
+            return False
+    else:
+        return False
+
+
+print(parrot_trouble(True, 5))
+print(parrot_trouble(True, 8))
+print(parrot_trouble(False, 22))
+# End
+

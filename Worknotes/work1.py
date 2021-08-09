@@ -39,3 +39,17 @@ print(*generate)
 for i in generate:
     print(i)
 
+# Open brackets must be closed by the same type of brackets.
+# Open brackets must be closed in the correct order.
+# Note that an empty string is also considered valid.
+# used replace() to delete string
+
+
+def isValid(s):
+    while '()' in s or '{}' in s or '[]' in s:
+        s = s.replace("()", "").replace("[]", "").replace("{}", "")
+    return s == ""
+
+
+brackets_ls = "{[()]}([])"
+print(isValid(brackets_ls))
