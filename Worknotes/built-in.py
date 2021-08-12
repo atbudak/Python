@@ -27,7 +27,7 @@ print("-------------------------- Lambda -------------------------")
 # it takes less space then def in computer also
 # we can write definition as long as one line
 # help us to use multiple func inside each other
-
+# anonymous, not callable function
 
 def func1(x):
     func2 = lambda x, y=21: x + y

@@ -136,3 +136,20 @@ def meaner(**ages):
 
 
 print(meaner(** dict_friends))
+
+# Lambda
+# lambda usage
+print((lambda x, y: x**y)(2, 3))
+v = (lambda x: x[::-1])("arter")
+print(v)
+
+n = [1, 4, 6]
+n2 = [1, 2, 5]
+k = list(map(lambda x, y: x*y, n, n2))
+print(k)
+
+words = ["alinin evi", "hasanın ocağı", "keremin yunusu", "asd"]
+print(list(map(len, words)))
+
+a = list(filter(lambda x: len(x) < 5, words))
+print(a)
