@@ -154,3 +154,17 @@ def prime(*, num2=100, lst4=None):
 print(prime(), '\n', prime.__doc__)
 # End
 
+# FizzBuzz
+# Start
+for i in range(1, 101):
+    if not i % 15:
+        print("FizzBuzz")
+    elif i % 5 == 0:
+        print("Buzz")
+    elif i % 3 == 0:
+        print("Fizz")
+    else:
+        print(i)
+# End
+
+
