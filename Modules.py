@@ -5,7 +5,8 @@
 # import array           # importing using the original module name
 # import array as arr    # importing using an alias name
 # from array import *    # imports everything present in the array module
-
+import datetime
+from datetime import date
 import random
 import math
 
@@ -29,3 +30,11 @@ print(random.random())  # Gives float value between 0, 1
 # from ..europe import kosovo  # subpackage name comes immediately after two dots
 
 # Absolute imports syntax are preferred, as they are usually more readable.
+
+# In-Class
+# from datetime import date ekleriz
+# gün bazında int değer alırız
+birth = date(571, 4, 22)
+death = date(632, 7, 8)
+
+print(datetime.date.toordinal(death) - datetime.date.toordinal(birth))
