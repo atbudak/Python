@@ -185,3 +185,16 @@ for i in range(len(C)):
 result = [x, y]
 print(result)
 # End
+# Factorial
+# Start
+
+
+def factorial(z):
+    fac = 1
+    for i in range(1, z+1):
+        fac *= i
+    return fac
+
+
+print(factorial(4))
+# End

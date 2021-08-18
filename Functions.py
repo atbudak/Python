@@ -138,6 +138,10 @@ def meaner(**ages):
 print(meaner(** dict_friends))
 
 # Lambda
+# You can use it with its own syntax using parentheses,
+# You can also assign it to a variable,
+# You can use it in several built-in functions,
+# It can be useful inside user-defined functions (def).
 # lambda usage
 print((lambda x, y: x**y)(2, 3))
 v = (lambda x: x[::-1])("arter")
