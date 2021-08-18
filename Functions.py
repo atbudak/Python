@@ -157,3 +157,25 @@ print(list(map(len, words)))
 
 a = list(filter(lambda x: len(x) < 5, words))
 print(a)
+
+# arbitrary func ile lambda
+equalambda = lambda *arg: list(arg).count(max(list(arg), key=list(arg).count)) \
+    if list(arg).count(max(list(arg), key=list(arg).count)) > 1 else 0
+
+print(equalambda(1, 2, 3, 4, 45, 4, 4))
+
+# Function Generator
+# Start
+
+
+def function_generator(x):
+    return lambda j: x(j)
+
+
+d = function_generator(print)
+d1 = function_generator(max)
+d2 = function_generator(sorted)
+d("hello")
+print(d1([3, 4, 5, 6]))
+print(d2([32, 45, 66, 90, 2]))
+# End
