@@ -1,4 +1,6 @@
 import math
+import random
+from timeit import timeit
 # List Comprehensions
 # Start
 liste = [i for i in range(5)]
@@ -197,4 +199,46 @@ def factorial(z):
 
 
 print(factorial(4))
+# End
+
+# Password Generator
+# Start
+# random imported
+uppers = [chr(random.randint(65, 90)) for i in range(3)]
+lowers = [chr(random.randint(97, 122)) for j in range(3)]
+numbers = [chr(random.randint(48, 57)) for k in range(3)]
+chars = chr(random.randint(33, 47)) + chr(random.randint(58, 64))
+password = "".join(uppers) + "".join(lowers) + "".join(numbers) + chars
+
+
+def shuffleit(arg):
+    temp = list(arg)
+    random.shuffle(temp)
+    return "".join(temp)
+
+
+print(shuffleit(password))
+# End
+# Start
+# list comprehension faster than loops
+# timeit imported
+
+
+def for_loop():
+    res = []
+    for i in range(1):
+        res.append(i)
+    return len(res)
+
+
+def list_comp():
+    l = [i for i in range(1)]
+    return len(l)
+
+
+a, b = timeit(for_loop, number=1), timeit(list_comp, number=1)
+
+print(round(b/a, 2))
+print(for_loop(), round(timeit(for_loop, number=1), 20))
+print(list_comp(), round(timeit(list_comp, number=1), 20))
 # End
