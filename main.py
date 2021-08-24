@@ -167,4 +167,21 @@ for i in range(1, 101):
         print(i)
 # End
 
+# Letter Count
+# Start
 
+
+def letter_count(sentence="This sentence will be example."):
+    ls = list(sentence)
+    dic = {}
+    for i in ls:
+        if i not in dic:
+            dic[i] = 1
+        else:
+            dic[i] += 1
+    return dic
+
+
+user = input("Enter a sentence : ")
+print(letter_count(user))
+# End
