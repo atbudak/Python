@@ -1,6 +1,6 @@
 import math
 import random
-from timeit import timeit
+from timeit import timeit, repeat
 # List Comprehensions
 # Start
 liste = [i for i in range(5)]
@@ -241,4 +241,22 @@ a, b = timeit(for_loop, number=1), timeit(list_comp, number=1)
 print(round(b/a, 2))
 print(for_loop(), round(timeit(for_loop, number=1), 20))
 print(list_comp(), round(timeit(list_comp, number=1), 20))
+# End
+# Letter count with timeit
+# Start
+# from timeit import repeat
+testcode = """
+def letter_count(sentence="This sentence will be example."):
+    ls = list(sentence)
+    dic = {}
+    for i in ls:
+        if i not in dic:
+            dic[i] = 1
+        else:
+            dic[i] += 1
+    return dic
+"""
+
+
+print(repeat(stmt=testcode, repeat=6))
 # End
