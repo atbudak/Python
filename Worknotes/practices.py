@@ -260,3 +260,30 @@ def letter_count(sentence="This sentence will be example."):
 
 print(repeat(stmt=testcode, repeat=6))
 # End
+
+# Permutation of given list
+# Start
+# 1 2 3
+# 2 1 3
+# 2 3 1
+# 3 2 1
+# 3 1 2
+# 1 3 2
+# I took [1, 2 ,3] as a example list to create an algorithm. As you can see above first number iterates to the end
+# and the iteration time decrease at outer loop when each inner loop cycle is completed
+lst = [1, 2, 3]
+permutations = []
+ls = lst.copy()
+
+for i in range(len(ls), 0, -1):
+    for j in range(i):
+        if ls not in permutations:
+            permutations.extend(ls)
+        index = ls[j]
+        ls.pop(j)
+        ls.insert(j+1, index)
+ls.clear()
+
+permutation = [permutations[x:x+len(lst)] for x in range(0, len(permutations), len(lst))]
+print(permutation)
+# End
