@@ -123,3 +123,13 @@ print("joseph :", school_records['grades_info']['teen']['joseph'])
 # İki dictionary birleştirmenin kısayolu
 combined_dict = dict(**dict_by_dict, **school_records)
 print(combined_dict)
+
+
+def list_to_key():
+    tipler = ["int", "str", "bool", "list", "dict", "set", "tuple"]
+    toplam = {}.fromkeys(tipler, 0)
+    # tipler listesindeki elemanların hepsini dict elemanına çevirir, value'sini 0 a eşitler
+    print(toplam)
+
+
+# list_to_key()
