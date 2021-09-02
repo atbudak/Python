@@ -287,3 +287,18 @@ ls.clear()
 permutation = [permutations[x:x+len(lst)] for x in range(0, len(permutations), len(lst))]
 print(permutation)
 # End
+
+# Recursive obeb modülü
+# Start
+
+
+def obeb(a, b):
+    """İlk sayıyı büyük olarak giriniz"""
+    if b == 0:
+        return a
+    else:
+        return obeb(b, a % b)
+
+
+print(obeb.__doc__, obeb(65, 25))
+# End
