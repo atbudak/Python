@@ -302,3 +302,25 @@ def obeb(a, b):
 
 print(obeb.__doc__, obeb(65, 25))
 # End
+
+# Sort
+# Start
+
+
+def solve(s="qwertyuiopasdfghjklzxcvbnm"):
+    setted_word = list(s)
+    dic = {}
+    for i in setted_word:
+        if i not in dic:
+            dic[i] = 1
+        elif i in dic.keys():
+            dic[i] += 1
+    ls = {k: dic[k] for k in sorted(dic, key=dic.get, reverse=True)}
+    three = []
+    for i in range(3):
+        three.extend(list(ls.items())[i])
+    print(f"{three[0]} {three[1]} \n{three[2]} {three[3]} \n{three[4]} {three[5]}")
+
+
+solve()
+# End
