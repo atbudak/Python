@@ -324,3 +324,42 @@ def solve(s="qwertyuiopasdfghjklzxcvbnm"):
 
 solve()
 # End
+# verilen listeyi 2. elemanına göre sıralama
+# Start
+
+
+def sorting_second_element():
+    inputs = [('b', 1), ('c', 2), ('x', 3), ('x', 4), ('z', 0)]
+    outputs = sorted(inputs, key=lambda x: x[1])
+    print(outputs)
+# End
+# Liste elemanı listeden farklıysa ve sonuç negatifse 0 döndürecek
+# Start
+
+
+def check_score(s):
+    shape = {'#': 5, 'O': 3, 'X': 1, '!': -1, '!!': -3, '!!!': -5}
+    is_list = []
+    number_list = []
+    given_list = []
+    for i in s:
+        if isinstance(i, list):
+            is_list.append(True)
+        else:
+            return 0
+
+    if all(is_list):
+        given_list = sum(s, [])
+
+    for item in given_list:
+        if item in shape:
+            number_list.append(shape[item])
+
+    if sum(number_list) < 0:
+        return 0
+    return sum(number_list)
+
+
+# check_score1 = [["#", "!"], ["!!!", "#", 'X'], ['O', '!!']]
+# print(check_score(check_score1))
+# End
