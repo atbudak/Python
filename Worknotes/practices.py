@@ -363,3 +363,38 @@ def check_score(s):
 # check_score1 = [["#", "!"], ["!!!", "#", 'X'], ['O', '!!']]
 # print(check_score(check_score1))
 # End
+
+# time converter
+# start
+def time_converter(time):
+    """###  This program converts milliseconds into hours, minutes, and seconds ###"""
+    times = int(time)
+    hours, minutes, seconds = times // 3_600_000, (times // 60_000) % 60, (times // 1_000) % 3_600 % 60
+    millisecond = times % 1000
+
+    h = f"{hours} hour/s " if hours else ''
+    m = f"{minutes} minute/s " if minutes else ''
+    s = f"{seconds} second/s " if seconds else ''
+    ms = f"{millisecond} millisecond/s " if millisecond else ''
+    print(times, "milliseconds is equal to " + h + m + s + ms)
+
+
+is_valid = True
+
+while True:
+    print(time_converter.__doc__ * is_valid)
+    print("""(To exit the program, please type "exit")""" * is_valid)
+    is_valid = False
+    milliseconds = input("Please enter the milliseconds (should be greater than zero) :  ")
+    if milliseconds.lower() == "exit":
+        print("Exiting the program... Good Bye")
+        break
+    else:
+        if milliseconds.isdigit() and int(milliseconds) > 0:
+            time_converter(milliseconds)
+            print("")
+            break
+        else:
+            print("Not Valid Input !!!")
+            pass
+# End
